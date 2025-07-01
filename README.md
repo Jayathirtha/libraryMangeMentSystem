@@ -49,8 +49,6 @@ java com.library.Main
 This will execute the main method in Main.java, demonstrating the library system's functionalities and different search methods.
 
 Class Diagram
-classDiagram
-    direction LR
 
     class Book {
         -String title
