@@ -42,13 +42,6 @@ public class Patron {
         return false;
     }
 
-    /**
-     * Overrides the equals method to compare patrons based on their patron ID.
-     * Patron ID is considered the unique identifier for a patron.
-     *
-     * @param o The object to compare with.
-     * @return true if the patrons are equal (same patron ID), false otherwise.
-     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -57,12 +50,6 @@ public class Patron {
         return Objects.equals(patronId, patron.patronId);
     }
 
-    /**
-     * Overrides the hashCode method to generate a hash code based on the patron ID.
-     * Consistent with the equals method.
-     *
-     * @return The hash code for this patron.
-     */
     @Override
     public int hashCode() {
         return Objects.hash(patronId);

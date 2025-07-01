@@ -44,13 +44,6 @@ public class Book {
         this.publicationYear = publicationYear;
     }
 
-    /**
-     * Overrides the equals method to compare books based on their ISBN.
-     * ISBN is considered the unique identifier for a book.
-     *
-     * @param o The object to compare with.
-     * @return true if the books are equal (same ISBN), false otherwise.
-     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -59,12 +52,6 @@ public class Book {
         return Objects.equals(isbn, book.isbn);
     }
 
-    /**
-     * Overrides the hashCode method to generate a hash code based on the ISBN.
-     * Consistent with the equals method.
-     *
-     * @return The hash code for this book.
-     */
     @Override
     public int hashCode() {
         return Objects.hash(isbn);

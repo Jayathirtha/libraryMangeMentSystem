@@ -12,7 +12,6 @@ import java.util.Map;
 
 /**
  * The core Library management system. It handles the inventory of books and patrons,
- * Implements ILibraryService for abstraction and LibraryObservable for the Observer pattern.
  */
 public class Library implements ILibraryService {
     // Stores all books in the library, keyed by ISBN for quick lookup
@@ -25,12 +24,6 @@ public class Library implements ILibraryService {
     private Map<String, Book> borrowedBooksByIsbn;
 
 
-
-    /**
-     * Constructs a new Library instance, initializing all internal data structures.
-     * Initializes the observer list using CopyOnWriteArrayList for thread safety
-     * if multiple threads were to add/remove observers (though not critical for this single-threaded demo).
-     */
     public Library() {
         this.allBooksByIsbn = new HashMap<>();
         this.patronsById = new HashMap<>();
@@ -94,11 +87,6 @@ public class Library implements ILibraryService {
         return results;
     }
 
-    /**
-     * Returns an unmodifiable list of all books in the library.
-     *
-     * @return A list of all books.
-     */
     @Override
     public List<Book> getAllBooks() {
         return new ArrayList<>(allBooksByIsbn.values());
