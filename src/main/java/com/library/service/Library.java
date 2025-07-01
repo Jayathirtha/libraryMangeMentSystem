@@ -14,13 +14,13 @@ import java.util.Map;
  * The core Library management system. It handles the inventory of books and patrons,
  */
 public class Library implements ILibraryService {
-    // Stores all books in the library, keyed by ISBN for quick lookup
+
     private Map<String, Book> allBooksByIsbn;
-    // Stores all patrons in the library, keyed by Patron ID
+
     private Map<String, Patron> patronsById;
-    // Tracks which books are currently available (not borrowed), keyed by ISBN
+
     private Map<String, Book> availableBooksByIsbn;
-    // Tracks which books are currently borrowed, keyed by ISBN
+
     private Map<String, Book> borrowedBooksByIsbn;
 
 
